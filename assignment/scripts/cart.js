@@ -2,7 +2,7 @@ console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
 
-// *** REQUIRED FEATURES ***
+// ***** REQUIRED FEATURES *****
 
 // 1 - Create a global variable named 'basket' and set it to an empty array.
         //CODE
@@ -90,3 +90,55 @@ console.log('***** Cart Functions *****');
         console.log("Great! Now I'm sure I can go home! Let me put these in the car");
         console.log(empty());
         console.log("I'll return the basket and head home now!");
+
+// ________________________________________________________________________
+
+// ***** STRETCH GOALS *****
+
+        //CODE
+        console.log('*****STRETCH GOALS*****');
+
+// 1 - Add a global const named 'maxItems' and set it to 5
+
+        //CODE
+        const maxItems = 5;
+
+        //COMMENTS
+        //const creates a variable that can't be changed later in the program.
+        //let creates a variable that CAN be changed later on.
+
+// 2 - Create a function called isFull(). It should:
+//      -return false if the basket contains LESS than max number of items
+//      -return true otherwise (equal or more than maxItems)
+
+        //CODE
+        function isFull(){
+          if(basket.length < maxItems){
+            return false;
+          } else {
+            return true;
+          }
+        }
+
+        //TEST
+        console.log("Let's see if our basket is full");
+        console.log(isFull());
+        console.log('false makes sense because our basket is empty. Let me add 6 items to the basket to see if it changes to true. ');
+        console.log(addItem('Fruit Loops'));
+        console.log(addItem('Tomatoes'));
+        console.log(addItem('Peanuts'));
+        console.log(addItem('Orange Juice'));
+        console.log(addItem('Bread'));
+        console.log(addItem('Apples'));
+        console.log(isFull());
+        console.log('It changed to true! isFull function works.');
+        console.log('Emptying out the basket for the next problem');
+        console.log(empty());
+
+        //COMMENTS
+        //I can still keep using the functions before stretch goals since it is all in one program
+
+// 3 - Update the required addItem function to:
+//      -use the isFull function to prevent more than maxItems from being added to the basket
+//      -if an item was added to the array, return true
+//      -if there was no room and the item could not be added, return false
