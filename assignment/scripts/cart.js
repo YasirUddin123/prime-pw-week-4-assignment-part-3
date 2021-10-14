@@ -142,3 +142,51 @@ console.log('***** Cart Functions *****');
 //      -use the isFull function to prevent more than maxItems from being added to the basket
 //      -if an item was added to the array, return true
 //      -if there was no room and the item could not be added, return false
+
+        //CODE
+        // function addItem(item){
+        //   basket.push(item);
+        //   if(basket )
+        //   return true;
+        // }
+
+        
+// 4 - Create a function called removeItem. It should:
+//      -Take an input parameter for a string item
+//      -Use Array.indexOf to find the index of the first matching item in the basket.
+//      -Use Array.splice to remove the first matching item from the basket.
+//      -Return the item removed or null if the item was not found.
+
+
+        //CODE
+
+        // create a function called removeItem. It takes in one argument called string
+        //   use a for loop to loop through the basket
+        //     use Array.indexOf to find index of first matching item in basket
+        //       if there ia a match
+        //         use Array.splice to remove the first matching item from the basket
+        //         return array.splice removed value
+        //       end if
+        //   end for loop
+        //   return null;
+        //   end function
+
+        console.log(addItem('Fruit Loops'));
+        console.log(addItem('Tomatoes'));
+        console.log(addItem('Peanuts'));
+        console.log(addItem('Orange Juice'));
+        console.log(addItem('Bread'));
+        console.log(addItem('Apples'));
+
+
+        function removeItem(string){
+          for(let i = 0; i < basket.length; i++){
+            if(basket.indexOf(string) === i){
+                // let removedValue = basket.splice(i, 1);
+                // return removedValue;
+                return true;
+            }
+          }
+          return null;
+
+        console.log(removeItem('Orange Juice'));
