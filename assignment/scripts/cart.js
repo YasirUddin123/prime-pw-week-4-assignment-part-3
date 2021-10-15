@@ -64,7 +64,6 @@ console.log('***** Cart Functions *****');
           return basket;
         }
 
-
         //TEST
         console.log('*****Emptying the cart*****');
         console.log("I bought my ingredients and put them in my car.");
@@ -79,7 +78,7 @@ console.log('***** Cart Functions *****');
         // then I experienced how local and global variables work by testing
 
 
-// MORE TESTING
+        //MORE TESTING
         console.log("*****TESTING MY CODE*****");
         console.log(`Oh no, I forgot the vegetable oil!!`);
         console.log("Let me grab a new basket. I realized I also need milk and paper towels.");
@@ -121,7 +120,7 @@ console.log('***** Cart Functions *****');
         }
 
         //TEST
-        console.log("Let's see if our basket is full");
+        console.log("*****Let's see if our basket is full*****");
         console.log(isFull());
         console.log('false makes sense because our basket is empty. Let me add 6 items to the basket to see if it changes to true. ');
         console.log(addItem('Fruit Loops'));
@@ -150,43 +149,44 @@ console.log('***** Cart Functions *****');
         //   return true;
         // }
 
-        
+
 // 4 - Create a function called removeItem. It should:
 //      -Take an input parameter for a string item
 //      -Use Array.indexOf to find the index of the first matching item in the basket.
 //      -Use Array.splice to remove the first matching item from the basket.
 //      -Return the item removed or null if the item was not found.
 
-
         //CODE
+        function removeItem(string){
+          for(let i = 0; i < basket.length; i++){
+            if(basket.indexOf(string) === i){
+                let removedValue = basket.splice(i, 1);
+                return removedValue;
+                // return true;
+            }
+          }
+          return null;
+        }
 
-        // create a function called removeItem. It takes in one argument called string
-        //   use a for loop to loop through the basket
-        //     use Array.indexOf to find index of first matching item in basket
-        //       if there ia a match
-        //         use Array.splice to remove the first matching item from the basket
-        //         return array.splice removed value
-        //       end if
-        //   end for loop
-        //   return null;
-        //   end function
-
+        //TEST
+        console.log('*****Removing an Item*****');
+        console.log("Let's add back the items from the last problem.");
         console.log(addItem('Fruit Loops'));
         console.log(addItem('Tomatoes'));
         console.log(addItem('Peanuts'));
         console.log(addItem('Orange Juice'));
         console.log(addItem('Bread'));
         console.log(addItem('Apples'));
-
-
-        function removeItem(string){
-          for(let i = 0; i < basket.length; i++){
-            if(basket.indexOf(string) === i){
-                // let removedValue = basket.splice(i, 1);
-                // return removedValue;
-                return true;
-            }
-          }
-          return null;
-
+        console.log(listItems());
+        console.log("Testing the function. Let's remove Orange Juice.");
         console.log(removeItem('Orange Juice'));
+        console.log(listItems());
+        console.log("The function worked!");
+
+        //COMMENTS
+        //on the browser console, I get 'undefined' on lines 185 and 188.
+        //I think this is okay because I didn't use the return keyword in the
+        //listItems function. I experimented with the function to see what would
+        //happen if I used return inside the function, but it only gave me
+        //one value because once return is used once, the function ends.
+        //But this isn't what I want because I want to list out all of the items.
