@@ -16,14 +16,13 @@ console.log('***** Cart Functions *****');
 //        -add the new item to the global array 'basket'
 //        -return ~true~ indicating the item was added
 
-        //CODE
+        //CODE ***This would run instead if I didn't update it from the stretch goal***
         // function addItem(item){  ********
         //   basket.push(item);
         //   return true;
         // }
 
         const maxItems = 5;
-
 
         function isFull(){
           if(basket.length < maxItems){
@@ -98,7 +97,6 @@ console.log('***** Cart Functions *****');
         // but it didn't work because I already defined basket earlier.
         // then I experienced how local and global variables work by testing
 
-
         //MORE TESTING
         console.log("*****TESTING MY CODE*****");
         console.log(`Oh no, I forgot the vegetable oil!!`);
@@ -120,8 +118,8 @@ console.log('***** Cart Functions *****');
 
 // 1 - Add a global const named 'maxItems' and set it to 5
 
-        //CODE
-        // const maxItems = 5;  *******
+        //CODE  ***Check out line #25***
+        // const maxItems = 5;
 
         //COMMENTS
         //const creates a variable that can't be changed later in the program.
@@ -131,8 +129,8 @@ console.log('***** Cart Functions *****');
 //      -return false if the basket contains LESS than max number of items
 //      -return true otherwise (equal or more than maxItems)
 
-        //CODE
-        // function isFull(){ *******
+        //CODE ***Check out line 27***
+        // function isFull(){
         //   if(basket.length < maxItems){
         //     return false;
         //   } else {
@@ -163,14 +161,18 @@ console.log('***** Cart Functions *****');
 //      -if an item was added to the array, return true
 //      -if there was no room and the item could not be added, return false
 
-
+        //CODE **Check out line 35***
         // function addItem(item){
         //   if(isFull() === false){
-        //   basket.push(item);
-        //   return true;
+        //     basket.push(item);
+        //     return true;
         //   }
         //   return false
         // }
+
+        //COMMENTS
+        //It looks like functions can be used in conditonals. This looks super helpful
+        //by using less code in a program.
 
 // 4 - Create a function called removeItem. It should:
 //      -Take an input parameter for a string item
