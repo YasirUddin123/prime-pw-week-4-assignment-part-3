@@ -17,9 +17,28 @@ console.log('***** Cart Functions *****');
 //        -return ~true~ indicating the item was added
 
         //CODE
+        // function addItem(item){  ********
+        //   basket.push(item);
+        //   return true;
+        // }
+
+        const maxItems = 5;
+
+
+        function isFull(){
+          if(basket.length < maxItems){
+            return false;
+          } else {
+            return true;
+          }
+        }
+
         function addItem(item){
-          basket.push(item);
-          return true;
+          if(isFull() === false){
+            basket.push(item);
+            return true;
+          }
+          return false
         }
 
         //TEST
@@ -29,7 +48,9 @@ console.log('***** Cart Functions *****');
         console.log(addItem(' syrup'));
         console.log(addItem(' chocolate chips'));
         console.log(addItem(' eggs'));
-        console.log(`Now I have four items in my basket which are:${basket}`);
+        console.log(addItem(' waffles'));
+        console.log(addItem(' zucchini'));
+        console.log(`Now I have five items in my basket which are:${basket}`);
 
         //COMMENTS
         // I created the function + tested different parameters on the console
@@ -100,7 +121,7 @@ console.log('***** Cart Functions *****');
 // 1 - Add a global const named 'maxItems' and set it to 5
 
         //CODE
-        const maxItems = 5;
+        // const maxItems = 5;  *******
 
         //COMMENTS
         //const creates a variable that can't be changed later in the program.
@@ -111,13 +132,13 @@ console.log('***** Cart Functions *****');
 //      -return true otherwise (equal or more than maxItems)
 
         //CODE
-        function isFull(){
-          if(basket.length < maxItems){
-            return false;
-          } else {
-            return true;
-          }
-        }
+        // function isFull(){ *******
+        //   if(basket.length < maxItems){
+        //     return false;
+        //   } else {
+        //     return true;
+        //   }
+        // }
 
         //TEST
         console.log("*****Let's see if our basket is full*****");
@@ -142,13 +163,14 @@ console.log('***** Cart Functions *****');
 //      -if an item was added to the array, return true
 //      -if there was no room and the item could not be added, return false
 
-        //CODE
-        // function addItem(item){
-        //   basket.push(item);
-        //   if(basket )
-        //   return true;
-        // }
 
+        // function addItem(item){
+        //   if(isFull() === false){
+        //   basket.push(item);
+        //   return true;
+        //   }
+        //   return false
+        // }
 
 // 4 - Create a function called removeItem. It should:
 //      -Take an input parameter for a string item
@@ -162,7 +184,6 @@ console.log('***** Cart Functions *****');
             if(basket.indexOf(string) === i){
                 let removedValue = basket.splice(i, 1);
                 return removedValue;
-                // return true;
             }
           }
           return null;
@@ -188,5 +209,5 @@ console.log('***** Cart Functions *****');
         //I think this is okay because I didn't use the return keyword in the
         //listItems function. I experimented with the function to see what would
         //happen if I used return inside the function, but it only gave me
-        //one value because once return is used once, the function ends.
-        //But this isn't what I want because I want to list out all of the items.
+        //one value because return is used once, the function ends.
+        //But this isn't what I want since I want to list out all of the items.
