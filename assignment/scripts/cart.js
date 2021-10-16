@@ -47,9 +47,10 @@ console.log('***** Cart Functions *****');
         console.log(addItem(' syrup'));
         console.log(addItem(' chocolate chips'));
         console.log(addItem(' eggs'));
-        console.log(addItem(' waffles'));
+        console.log(addItem(' plastic forks'));
         console.log(addItem(' zucchini'));
         console.log(`Now I have five items in my basket which are:${basket}`);
+        console.log('I wanted to add zucchini, but my basket was full :(');
 
         //COMMENTS
         // I created the function + tested different parameters on the console
@@ -147,7 +148,6 @@ console.log('***** Cart Functions *****');
         console.log(addItem('Peanuts'));
         console.log(addItem('Orange Juice'));
         console.log(addItem('Bread'));
-        console.log(addItem('Apples'));
         console.log(isFull());
         console.log('It changed to true! isFull function works.');
         console.log('Emptying out the basket for the next problem');
@@ -199,7 +199,6 @@ console.log('***** Cart Functions *****');
         console.log(addItem('Peanuts'));
         console.log(addItem('Orange Juice'));
         console.log(addItem('Bread'));
-        console.log(addItem('Apples'));
         console.log(listItems());
         console.log("Testing the function. Let's remove Orange Juice.");
         console.log(removeItem('Orange Juice'));
@@ -213,3 +212,5 @@ console.log('***** Cart Functions *****');
         //happen if I used return inside the function, but it only gave me
         //one value because return is used once, the function ends.
         //But this isn't what I want since I want to list out all of the items.
+
+//ready for submission
