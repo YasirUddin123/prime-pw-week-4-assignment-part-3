@@ -206,7 +206,7 @@ console.log('***** Cart Functions *****');
         console.log("The function worked!");
 
         //COMMENTS
-        //on the browser console, I get 'undefined' on lines 185 and 188.
+        //on the browser console, I get 'undefined' on lines 202 and 205.
         //I think this is okay because I didn't use the return keyword in the
         //listItems function. I experimented with the function to see what would
         //happen if I used return inside the function, but it only gave me
